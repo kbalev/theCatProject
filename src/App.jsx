@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Card from "./Card";
+import Navbar from './components/Navbar';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ if (loading){
 }
 return(
   <Router>
+   <Navbar />
     <div>
       <h1>The beginnings of the Cat website</h1>
     </div>
