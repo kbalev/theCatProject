@@ -2,6 +2,7 @@ import './catbreed.css';
 import {useState, useEffect} from 'react';
 import StarRatingComponent from 'react-star-rating-component';
 
+
 const Breed = () => {
     const[data, setData] = useState('');
     const [error, setError] = useState({error: false, message: ''});
@@ -47,30 +48,21 @@ const Breed = () => {
                 <p className='temperament'>{breed.temperament}</p>
               </div>
               <div className="breed-stars">
-                <h4>Energy Levels</h4>
-                <StarRatingComponent
-                  editing={false}
-                  renderStarIcon={() => <span>*</span>}
-                  starCount={5}
-                  value={breed.energy_level}
-                  name={breed.name}
+              <h4>Energy Level</h4>
+                <StarRatingComponent 
+                value={breed.energy_level}
+                name={breed.name}
                 />
                 <h4>Affection Level</h4>
                 <StarRatingComponent
-                  editing={false}
-                  renderStarIcon={() => <span>*</span>}
-                  starCount={5}
                   value={breed.affection_level}
                   name={breed.name}
                 />
                 <h4>Social Needs</h4>
                 <StarRatingComponent
-                  editing={false}
-                  renderStarIcon={() => <span>*</span>}
-                  starCount={5}
                   value={breed.social_needs}
                   name={breed.name}
-                />
+                  />
               </div>
               <div className="breed-info">
                 <h3 className="breed-name">{breed.name}</h3>
