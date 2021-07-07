@@ -28,20 +28,6 @@ if (loading){
 return(
   <Router>
    <Navbar />
-    <div>
-      <h1>The beginnings of the Cat website</h1>
-    </div>
-    <div>
-    <h1>Pulling a fetch request</h1>
-    <ul>
-      {cats
-          .filter((cat) => cat.image)
-          .map((cat) => (
-        <Card id={cat.id} name={cat.name} description={cat.description} image={cat.image.url}/>
-      ))}
-    </ul>
-    <button onClick={handleFetch}>Click</button>
-  </div>
   <nav>
         <ul>
           <li>
@@ -57,7 +43,6 @@ return(
           <Breed />
         </Route>
         <Route exact path='/'>
-        <h1>The beginnings of the Cat website</h1>
         </Route>
       </Switch>
   </Router>
