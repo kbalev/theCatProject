@@ -19,6 +19,7 @@ useEffect(
     setLoading(false);
   }
   let cats = [...data];
+
 if (loading){
   return <h1>Loading</h1>
 }
@@ -30,8 +31,10 @@ return(
     <div>
     <h1>Pulling a fetch request</h1>
     <ul>
-      {cats.map((cat) => (
-        <Card id={cat.id} name={cat.name} description={cat.description} image={cat.image}/>
+      {cats
+          .filter((cat) => cat.image)
+          .map((cat) => (
+        <Card id={cat.id} name={cat.name} description={cat.description} image={cat.image.url}/>
       ))}
     </ul>
     <button onClick={handleFetch}>Click</button>
