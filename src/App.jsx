@@ -2,7 +2,9 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Breed from "./catbreed";
+import Breed from './component-breeds/catbreed';
+
+
 
 const App = () => {
   return (
