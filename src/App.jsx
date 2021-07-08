@@ -10,6 +10,7 @@ const App = () => {
 
   const [items,setItems] = useState([])
   const [data, setData] = useState('')
+  const [prices, setPrices] = useState('')
 
   return (
     <Router>
@@ -35,10 +36,10 @@ const App = () => {
           <Breed data={data} setData={setData} />
         </Route>
         <Route path="/Shop">
-          <Shop items={items} setItems={setItems} data={data} setData={setData}/>
+          <Shop items={items} setItems={setItems} data={data} setData={setData} prices={prices} setPrices={setPrices}/>
         </Route>
         <Route path="/Cart">
-          <Cart items={items} setItems={setItems}/>
+          <Cart items={items} setItems={setItems} prices={prices} setPrices={setPrices}/>
         </Route>
         <Route exact path="/"></Route>
       </Switch>
