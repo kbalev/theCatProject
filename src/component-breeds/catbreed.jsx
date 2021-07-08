@@ -3,8 +3,7 @@ import {useState, useEffect} from 'react';
 import StarRatingComponent from 'react-star-rating-component';
 
 
-const Breed = () => {
-    const[data, setData] = useState('');
+const Breed = ({data, setData}) => {
     const [error, setError] = useState({error: false, message: ''});
 
     useEffect(() => {
