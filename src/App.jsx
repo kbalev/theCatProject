@@ -8,9 +8,10 @@ import React from 'react';
 import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
 import Navbar from "./components/Navbar";
-import { Shop } from "./Shop";
-import { Cart } from "./Cart"
 import {CatPages} from"./component-pages/catpages"
+import { Shop } from "./components/Shop";
+import { Cart } from "./components/Cart"
+
 
 const App  = () => {
 const[data, setData] = useState('');
@@ -57,25 +58,6 @@ const [error, setError] = useState({error: false, message: ''});
   return (
     <Router>
       <Navbar />
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/catbreed">About</Link>
-          </li>
-          <li >
-            <Link to="/Shop">Shop</Link>
-          </li>
-          <li >
-            <Link to="/Cart">Cart</Link>
-          </li>
-          <li>
-            <Link to='/Rescue'>Rescue</Link>
-          </li>
-        </ul>
-      </nav>
       <Switch>
         
         <Route path="/catbreed">
@@ -88,7 +70,7 @@ const [error, setError] = useState({error: false, message: ''});
           <Rescue />
         </Route>
         <Route exact path='/'>
-        <h1>The beginnings of the Cat website</h1>
+        <h1>The Glorious Cat Website - Team 5 Edition</h1>
          <Carousel>{CatImage}</Carousel>
         </Route>
         <Route path="/Cart">
