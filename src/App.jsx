@@ -1,7 +1,7 @@
 import './App.css';
 import { useState,useEffect } from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
-import{Page,Pages} from "./cat_pages.jsx"
+import { BrowserRouter as Router, Switch} from 'react-router-dom';
+import{Pages} from "./cat_pages.jsx"
 const App = () =>{
   const [data,setdata]= useState([]);
   
@@ -30,7 +30,9 @@ const App = () =>{
   };
   return(
     <Router>
+        <switch>
     <Pages data = {data} />
+        </switch>
     </Router>
   )
 }
