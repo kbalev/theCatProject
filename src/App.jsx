@@ -56,25 +56,6 @@ const [error, setError] = useState({error: false, message: ''});
   return (
     <Router>
       <Navbar />
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/catbreed">About</Link>
-          </li>
-          <li >
-            <Link to="/Shop">Shop</Link>
-          </li>
-          <li >
-            <Link to="/Cart">Cart</Link>
-          </li>
-          <li>
-            <Link to='/Rescue'>Rescue</Link>
-          </li>
-        </ul>
-      </nav>
       <Switch>
         <Route path="/catbreed">
           <Breed data={data} setData={setData} />
@@ -86,7 +67,7 @@ const [error, setError] = useState({error: false, message: ''});
           <Rescue />
         </Route>
         <Route exact path='/'>
-        <h1>The beginnings of the Cat website</h1>
+        <h1>The Glorious Cat Website - Team 5 Edition</h1>
          <Carousel>{CatImage}</Carousel>
         </Route>
         <Route path="/Cart">
