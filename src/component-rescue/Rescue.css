@@ -30,7 +30,7 @@
 }
 
 .cat-container:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .thumbnail {
@@ -47,14 +47,13 @@
 }
 
 .cats {
-    padding-top: 50px;
+    padding-top: 40px;
     margin: auto;
     text-align: center;
     width: 100%;
 }
 
 .price{
-    padding: 5px;
     border-top: 1px dotted grey;
     box-shadow: 2px solid grey;
 }
@@ -62,37 +61,30 @@
 @media screen and (min-width:1900px) {
     .container {
     display:grid;
-    width: 50%;
+    width: 80%;
     grid-template-columns: 1fr 1fr;
     }
     .thumbnail {
     display: flex;
     }
 }
-@media screen and (min-width: 1300px) and (max-width:1950px) {
+
+@media screen and (min-width: 1200px) and (max-width:1900px) {
     .container {
         display:grid;
-        width: 70%;
+        width: 100%;
         grid-template-columns: 1fr 1fr;
     }
+    .thumbnail {
+        display: block;
+        }
     .cat-container {
         width:90%;
-     }
-    
-}
-@media screen and (min-width: 1000px) and (max-width:1300px) {
-    .container {
-        display:grid;
-        width: 90%;
-        grid-template-columns: 1fr 1fr;
-    }
-    .cat-container {
-        width:90%;
-     }
+     } 
     
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:700px) {
     .cat-container {
         display: block;
     }

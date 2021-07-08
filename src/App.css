@@ -1,5 +1,43 @@
+.wrapper {
+    background-color: rgb(223, 224, 215);
+}
+
+
 .cat {
     width: 400px;
     height: 400px;
     object-fit: cover;
+}
+
+button div {
+    background: rgb(223, 224, 215);
+}
+
+h1, h3 {
+    font-family: 'Lucida Grande', Geneva, Verdana, sans-serif;
+    color:rgb(41, 70, 71);
+    padding: 10px;
+    margin:auto;
+}
+
+h3 {
+    padding-bottom: 50px;
+}
+
+@media  screen and (min-width:1200px) {
+    .cat{
+        width: 550px;
+        height: 550px;
+    }
+    h3 {
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .cat{
+        width: 300px;
+        height: 300px;
+    }
+    
 }

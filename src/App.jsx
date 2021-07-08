@@ -46,7 +46,7 @@ const [error, setError] = useState({error: false, message: ''});
         .filter((cat) => cat.image)
         .map((cat) => {
           return (
-              <div >
+              <div className='wrapper'>
                 <img className='cat' src={cat.image.url} />
                 <h2>{cat.name}</h2>
               </div>
@@ -86,7 +86,8 @@ const [error, setError] = useState({error: false, message: ''});
           <Rescue />
         </Route>
         <Route exact path='/'>
-        <h1>The beginnings of the Cat website</h1>
+        <h1>Welcome to Cats 4 You</h1>
+        <h3>We can help you find your purrfect cat!</h3>
          <Carousel>{CatImage}</Carousel>
         </Route>
         <Route path="/Cart">
