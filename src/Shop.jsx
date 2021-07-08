@@ -50,11 +50,11 @@ export const Shop = ({ items, setItems, data, setData, prices, setPrices }) => {
                 </div>
                 <div className="breed-info">
                   <h3 className="breed-name">{breed.name}</h3>
-                  <p className="catPrice">£{(breed.dog_friendly + 1) * 5}.00</p>
+                  <p className="catPrice">£{(breed.dog_friendly + 1) * 25}.00</p>
                   <button
                     type="button"
                     onClick={() => {
-                      handleItem(breed.name, (breed.dog_friendly + 1) * 5);
+                      handleItem(breed.name, (breed.dog_friendly + 1) * 25);
                     }}
                   >
                     Add to cart
