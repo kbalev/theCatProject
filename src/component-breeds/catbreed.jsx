@@ -1,5 +1,6 @@
 import './catbreed.css';
 import {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
 
 
@@ -67,7 +68,8 @@ const Breed = ({data, setData}) => {
                 <h3 className="breed-name">{breed.name}</h3>
                 <p>{breed.description}</p>
               </div>
-              <link to={`/${breed.id}`}>More Info</link>
+              <Link to={`/${breed.id}`}>More Info</Link>
+              
             </div>
           ))}
       </div>

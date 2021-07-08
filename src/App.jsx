@@ -10,7 +10,8 @@ import 'react-gallery-carousel/dist/index.css';
 import Navbar from "./components/Navbar";
 import { Shop } from "./Shop";
 import { Cart } from "./Cart"
-import catPages from"./component-pages/catpages.jsx"
+import {catPages} from"./component-pages/catpages"
+
 const App  = () => {
 const[data, setData] = useState('');
 const [prices, setPrices] = useState('')
@@ -76,6 +77,7 @@ const [error, setError] = useState({error: false, message: ''});
         </ul>
       </nav>
       <Switch>
+        
         <Route path="/catbreed">
           <Breed data={data} setData={setData} />
         </Route>
