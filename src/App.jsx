@@ -1,7 +1,7 @@
 import './App.css';
 import { useState,useEffect } from 'react';
-import { BrowserRouter as Router, Switch} from 'react-router-dom';
-import{Pages} from "./cat_pages.jsx"
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import{CatPage,CatPages} from "./cat_pages.jsx"
 const App = () =>{
   const [data,setdata]= useState([]);
   
@@ -29,10 +29,18 @@ const App = () =>{
     }
   };
   return(
+    
     <Router>
-        <switch>
-    <Pages data = {data} />
-        </switch>
+      <Switch>
+      <Route exact path="/">
+        <h1>Homepage</h1>
+        <Link to="/abys">GO to abys page</Link>
+        <Link to="/abob">GO to abob page</Link>
+
+        <Link to="/pers">GO to pers page</Link>
+      </Route>
+    <CatPages data = {data} />
+    </Switch>
     </Router>
   )
 }

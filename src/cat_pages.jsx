@@ -1,6 +1,7 @@
 import { Route, Link } from "react-router-dom";
 import StarRatingComponent from "react-star-rating-component";
 import styled from "styled-components";
+
 const StyledContainer = styled.div`
   margin: 10px;
   padding: 10px;
@@ -34,7 +35,7 @@ const StyledContainer = styled.div`
   }
 `;
 
-const Page = (props) => {
+const CatPage = (props) => {
   return (
     <StyledContainer>
       <h1>{props.value.name}</h1>
@@ -147,8 +148,12 @@ const Page = (props) => {
   );
 };
 
-const Pages = (props) => {
-  
+const CatPages = (props) => {
+  // for (let i = 0; i < props.data.length; i++) {
+  //   if (props.data[i].image !== undefined) {
+  //     console.log(`/${props.data[i].id}`);
+  //   }
+  // }
 
   return (
     <div>
@@ -162,10 +167,11 @@ const Pages = (props) => {
 
       {props.data.map((value, index) => {
         if (value.image !== undefined) {
+          console.log(value)
           return (
             <Route key={index}
               path={`/${value.id}`}
-              children={<Page  value={value} />}
+              children={<CatPage  value={value} />}
             />
           );
         }
@@ -176,4 +182,4 @@ const Pages = (props) => {
   );
 };
 
-export { Page, Pages };
+export { CatPage, CatPages };
