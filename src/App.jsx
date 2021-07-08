@@ -8,8 +8,8 @@ import React from 'react';
 import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
 import Navbar from "./components/Navbar";
-import { Shop } from "./Shop";
-import { Cart } from "./Cart"
+import { Shop } from "./components/Shop";
+import { Cart } from "./components/Cart"
 
 const App  = () => {
 const[data, setData] = useState('');
