@@ -10,7 +10,7 @@ import 'react-gallery-carousel/dist/index.css';
 import Navbar from "./components/Navbar";
 import { Shop } from "./Shop";
 import { Cart } from "./Cart"
-import {catPages} from"./component-pages/catpages"
+import {CatPages} from"./component-pages/catpages"
 
 const App  = () => {
 const[data, setData] = useState('');
@@ -94,7 +94,7 @@ const [error, setError] = useState({error: false, message: ''});
         <Route path="/Cart">
           <Cart items={items} setItems={setItems} prices={prices} setPrices={setPrices}/>
         </Route>
-        <catPages data={data}/>
+        <CatPages data={data}/>
         <Route exact path="/"></Route>
       </Switch>
     </Router>

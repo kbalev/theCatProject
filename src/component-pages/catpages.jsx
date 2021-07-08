@@ -34,7 +34,7 @@ const StyledContainer = styled.div`
   }
 `;
 
-const catPage = (props) => {
+const CatPage = (props) => {
   return (
     <StyledContainer>
       <h1>{props.value.name}</h1>
@@ -147,7 +147,7 @@ const catPage = (props) => {
   );
 };
 
-const catPages = (props) => {
+const CatPages = (props) => {
   
 
   return (
@@ -159,7 +159,7 @@ const catPages = (props) => {
           return (
             <Route key={index}
               path={`/${value.id}`}
-              children={<catPage  value={value} />}
+              children={<CatPage  value={value} />}
             />
           );
         }
@@ -170,4 +170,4 @@ const catPages = (props) => {
   );
 };
 
-export {  catPages };
+export {  CatPages };
