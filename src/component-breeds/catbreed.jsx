@@ -31,7 +31,7 @@ const Breed = ({data, setData}) => {
       return <h1>An error has occured: {error.message}</h1>;
     } else {
       let breed = [...data];
-      console.log(data);
+      
 
 
     return (
