@@ -8,8 +8,10 @@ import React from 'react';
 import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
 import Navbar from "./components/Navbar";
-import { Shop } from "./Shop";
-import { Cart } from "./Cart"
+import {CatPages} from"./component-pages/catpages"
+import { Shop } from "./components/Shop";
+import { Cart } from "./components/Cart"
+
 
 const App  = () => {
 const[data, setData] = useState('');
@@ -56,26 +58,8 @@ const [error, setError] = useState({error: false, message: ''});
   return (
     <Router>
       <Navbar />
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/catbreed">About</Link>
-          </li>
-          <li >
-            <Link to="/Shop">Shop</Link>
-          </li>
-          <li >
-            <Link to="/Cart">Cart</Link>
-          </li>
-          <li>
-            <Link to='/Rescue'>Rescue</Link>
-          </li>
-        </ul>
-      </nav>
       <Switch>
+        
         <Route path="/catbreed">
           <Breed data={data} setData={setData} />
         </Route>
@@ -88,11 +72,13 @@ const [error, setError] = useState({error: false, message: ''});
         <Route exact path='/'>
         <h1>Welcome to Cats 4 You</h1>
         <h3>We can help you find your purrfect cat!</h3>
+
          <Carousel>{CatImage}</Carousel>
         </Route>
         <Route path="/Cart">
           <Cart items={items} setItems={setItems} prices={prices} setPrices={setPrices}/>
         </Route>
+        <CatPages data={data}/>
         <Route exact path="/"></Route>
       </Switch>
     </Router>
