@@ -14,7 +14,7 @@ import { Cart } from "./components/Cart"
 
 
 const App  = () => {
-const[data, setData] = useState('');
+const [data, setData] = useState([]);
 const [prices, setPrices] = useState('')
 const [items,setItems] = useState([])
 const [error, setError] = useState({error: false, message: ''});
