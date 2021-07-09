@@ -66,7 +66,7 @@ const Breed = ({data, setData}) => {
               </div>
               <div className="breed-info">
                 <h3 className="breed-name">{breed.name}</h3>
-                <p>{breed.description}</p>
+                <p className="blurb">{breed.description}</p>
               </div>
               <Link to={`/${breed.id}`}>More Info</Link>
               
