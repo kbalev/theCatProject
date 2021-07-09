@@ -34,6 +34,7 @@ const Rescue = () => {
     for (let i = 0; i < breed.length; i++) {
       breed[i].price = CatData[i].price;
       breed[i].name = CatData[i].name;
+      breed[i].desc = CatData[i].description;
     }
 
     console.log(breed);
@@ -48,7 +49,7 @@ const Rescue = () => {
                     <img className="thumbnail" alt="" src={breed.url} />
                   )}
                   <div className='purchase'>
-                  <p>Contact</p>
+                  <p>{breed.desc}</p>
                   
                   <div className='cats'>
                    <h3>{breed.name}</h3> 
