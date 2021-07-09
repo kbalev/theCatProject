@@ -5,7 +5,8 @@ const StyledContainer = styled.div`
   margin: 10px;
   padding: 10px;
   text-align: center;
-  color: grey;
+  color:rgb(41, 70, 71)
+}
   h1 {
     text-align: center;
   }
@@ -13,6 +14,7 @@ const StyledContainer = styled.div`
     margin: auto;
     max-width: 80%;
     max-height:50vh;
+    border: 3px solid goldenrod;
   }
 
   .starsList {
@@ -134,8 +136,7 @@ const CatPage = (props) => {
         </div>
       </div> 
       <h3>More information</h3> 
-        <div className="moreInfo">
-          
+        <div className="moreInfo"> 
           <a className="links" href={props.value.cfa_url}>CFA</a>
           <a className="links" href={props.value.vetstreet_url}>Vetstreet</a>
           <a className="links" href={props.value.wikipedia_url}>Wikipedia</a>
@@ -164,8 +165,6 @@ const CatPages = (props) => {
           );
         }
       })}
-
-      
     </div>
   );
 };
