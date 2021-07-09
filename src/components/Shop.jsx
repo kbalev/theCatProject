@@ -33,7 +33,7 @@ export const Shop = ({ items, setItems, data, setData, prices, setPrices }) => {
     console.log(data);
 
     return (
-      <div className="container">
+      <div className="mainContainer">
         <div className="header">
           <h1>Welcome to Ye Olde Cat Shoppe</h1>
         </div>
