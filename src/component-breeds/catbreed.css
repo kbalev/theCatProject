@@ -52,6 +52,9 @@
     width: 100%;
 }
 
+.blurb{
+    font-size:small;
+}
 .breed-name {
     padding: 20px;
 }

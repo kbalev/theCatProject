@@ -11,7 +11,7 @@ function Navbar() {
         <div className="logo">Cats 4 You</div>
         <ul
           className="nav-links"
-          style={{ transform: open ? "translateX(0px)" : "" }}
+          style={{ transform: open ? "translateX(-500px)" : "translateX(0px)" }}
         >
           <li>
             <Link to="/">Home</Link>
